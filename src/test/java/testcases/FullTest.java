@@ -24,7 +24,7 @@ public class FullTest extends DriverSetup{
 	CheckoutDetails checkout= new CheckoutDetails();
 	
 	@Test
-	public void automate() throws InterruptedException {
+	public void automate() {
 		hp.clickAuthor();
 		login.doLogin();
 		myacc.clickAuthor();

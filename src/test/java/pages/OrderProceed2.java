@@ -12,9 +12,8 @@ public class OrderProceed2 extends BasePage{
 	
 	public By CHECKOUT= By.cssSelector("a[title='checkout'] span");
 	
-	public void clickCheckout() throws InterruptedException {
-		WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.elementToBeClickable(CHECKOUT));
+	public void clickCheckout() {
+		explicitWait(CHECKOUT);
 		clickOnElement(CHECKOUT);
 	}
 

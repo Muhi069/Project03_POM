@@ -1,11 +1,15 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckoutDetails extends BasePage{
 	
@@ -19,54 +23,59 @@ public class CheckoutDetails extends BasePage{
 	public By bKash= By.xpath("//label[contains(text(),'বিকাশ')]");
 	
 	
-	public void fillInDetails() throws InterruptedException {
+	public void fillInDetails() {
 		//give name
+		explicitWait(namefield);
 		clickOnElement(namefield);
-		Thread.sleep(2000);
-		inputText(namefield, "Al Mutasim Hasan Muhi");
-		Thread.sleep(2000);
+		WebElement nameField= getElement(namefield);
+		nameField.clear();
+		nameField.sendKeys("Al Mutasim Hasan Muhi");
+		
 		
 		//phone number
+		explicitWait(contact);
 		clickOnElement(contact);
-		Thread.sleep(2000);
-		inputText(contact, "01634546430");
-		Thread.sleep(2000);
+		WebElement Contact= getElement(contact);
+		Contact.clear();
+		Contact.sendKeys("01634546430");
 		
 		//email 
+		explicitWait(email);
 		clickOnElement(email);
-		Thread.sleep(2000);
-		inputText(email, "kalabhuna00019@gmail.com");
-		Thread.sleep(2000);
+		WebElement Email= getElement(email);
+		Email.clear();
+		Email.sendKeys("kalabhuna00019@gmail.com");
 		
 		//district
+		explicitWait(district);
 		clickOnElement(district);
-		Thread.sleep(2000);
 		inputText(district_input, "Bogu");
-		Thread.sleep(2000);
+		//getDriver().wait(1);
 		Actions action= new Actions(getDriver());
 		action.sendKeys(Keys.ARROW_DOWN).build().perform();
-		Thread.sleep(2000);
+		//getDriver().wait(1);
 		action.sendKeys(Keys.ENTER).build().perform();
-		Thread.sleep(2000);
+		
 		
 		//area
+		explicitWait(area);
 		WebElement jela= getElement(area);
+		WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(jela));
 		jela.click();
-		Thread.sleep(2000);
+		
 		Select select= new Select(jela);
 		select.selectByValue("123");
-		Thread.sleep(2000);
+		
 		
 		//address
+		explicitWait(address);
 		clickOnElement(address);
-		Thread.sleep(2000);
 		inputText(address, "Malgram Moddhopara, Bogura");
-		Thread.sleep(3000);
 		
 		//bkash
 		WebElement bkashPay= getElement(bKash);
 		bkashPay.click();
-		Thread.sleep(2000);
 		
 	}
 

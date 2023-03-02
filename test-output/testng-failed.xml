@@ -5,8 +5,8 @@
     <classes>
       <class name="testcases.FullTest">
         <methods>
-          <include name="getBrowser"/>
           <include name="automate"/>
+          <include name="getBrowser"/>
           <include name="setBrowser"/>
         </methods>
       </class> <!-- testcases.FullTest -->

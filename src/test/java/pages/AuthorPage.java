@@ -8,11 +8,11 @@ public class AuthorPage extends BasePage{
 	
 	public By AUTHOR_NAME= By.xpath("//h3[normalize-space()='Ainun Nishat']");
 	
-	public void clickAuthorname() throws InterruptedException {
+	public void clickAuthorname() {
 		WebElement authorName= getElement(AUTHOR_NAME);
 		JavascriptExecutor js= (JavascriptExecutor)getDriver();
 		js.executeScript("arguments[0].scrollIntoView()", authorName);
-		Thread.sleep(2000);
+		explicitWait(AUTHOR_NAME);
 		clickOnElement(AUTHOR_NAME);
 	}
 
