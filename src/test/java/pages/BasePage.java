@@ -27,8 +27,8 @@ public class BasePage extends DriverSetup{
 		getElement(locator).sendKeys(text);
 	}
 	
-	public void getElementText(By locator) {
-		getElement(locator).getText();
+	public String getElementText(By locator) {
+		return getElement(locator).getText();
 	}
 	
 	public void takeSS(String name) {

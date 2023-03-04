@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.FullTest">
+      <class name="testcases.FunctionalTestCases">
         <methods>
-          <include name="automate"/>
+          <include name="confirmOrderWithAllEmptyField"/>
           <include name="getBrowser"/>
           <include name="setBrowser"/>
         </methods>
-      </class> <!-- testcases.FullTest -->
+      </class> <!-- testcases.FunctionalTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

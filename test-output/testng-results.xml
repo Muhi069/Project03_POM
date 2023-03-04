@@ -1,25 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="11" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-02T16:28:13 BDT" name="Default suite" finished-at="2023-03-02T16:28:31 BDT" duration-ms="18500">
+  <suite started-at="2023-03-04T20:59:29 BDT" name="Suite" finished-at="2023-03-04T21:00:07 BDT" duration-ms="37693">
     <groups>
     </groups>
-    <test started-at="2023-03-02T16:28:13 BDT" name="Default test" finished-at="2023-03-02T16:28:31 BDT" duration-ms="18500">
-      <class name="testcases.FullTest">
-        <test-method is-config="true" signature="setBrowser()[pri:0, instance:testcases.FullTest@a3d9978]" started-at="2023-03-02T16:28:11 BDT" name="setBrowser" finished-at="2023-03-02T16:28:13 BDT" duration-ms="2206" status="PASS">
+    <test started-at="2023-03-04T20:59:29 BDT" name="Test" finished-at="2023-03-04T21:00:07 BDT" duration-ms="37693">
+      <class name="testcases.FunctionalTestCases">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:27 BDT" name="setBrowser" finished-at="2023-03-04T20:59:29 BDT" duration-ms="2136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="automate()[pri:0, instance:testcases.FullTest@a3d9978]" started-at="2023-03-02T16:28:13 BDT" name="automate" finished-at="2023-03-02T16:28:31 BDT" duration-ms="18338" status="PASS">
+        <test-method signature="loginTest()[pri:1, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:29 BDT" name="loginTest" description="LoginTest" finished-at="2023-03-04T20:59:31 BDT" duration-ms="2048" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- automate -->
-        <test-method is-config="true" signature="getBrowser()[pri:0, instance:testcases.FullTest@a3d9978]" started-at="2023-03-02T16:28:31 BDT" name="getBrowser" finished-at="2023-03-02T16:28:32 BDT" duration-ms="263" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginButtonTest()[pri:2, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:31 BDT" name="loginButtonTest" description="Testing Login Button clcickable or not" finished-at="2023-03-04T20:59:34 BDT" duration-ms="2425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginButtonTest -->
+        <test-method signature="emailCheckWithSpecialCharacters(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:34 BDT" name="emailCheckWithSpecialCharacters" description="Wrong Emails" data-provider="invalidEmails" finished-at="2023-03-04T20:59:37 BDT" duration-ms="3558" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[@@##^^]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Error: The username @@##^^ is not registered on this site. If you are unsure of your username, try your email address instead.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailCheckWithSpecialCharacters -->
+        <test-method signature="noMailPass(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:37 BDT" name="noMailPass" description="No Input" data-provider="noCredentials" finished-at="2023-03-04T20:59:40 BDT" duration-ms="2882" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Error: ইউজার নাম প্রয়োজন]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noMailPass -->
+        <test-method signature="noPass(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:40 BDT" name="noPass" description="username with no password" data-provider="noPassword" finished-at="2023-03-04T20:59:43 BDT" duration-ms="2545" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tigen52205@wireps.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Error: The password field is empty.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noPass -->
+        <test-method signature="rightMailPass(java.lang.String,java.lang.String)[pri:6, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:43 BDT" name="rightMailPass" description="Check correct login" data-provider="rightCredentials" finished-at="2023-03-04T20:59:46 BDT" duration-ms="3291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tigen52205@wireps.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rightMailPass -->
+        <test-method signature="lekhokBtnCheck()[pri:7, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:46 BDT" name="lekhokBtnCheck" description="Lekhok button check" finished-at="2023-03-04T20:59:47 BDT" duration-ms="1270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lekhokBtnCheck -->
+        <test-method signature="ainunNishatButtonCheck()[pri:8, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:47 BDT" name="ainunNishatButtonCheck" description="Ainun Nishat button clickable?" finished-at="2023-03-04T20:59:48 BDT" duration-ms="752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ainunNishatButtonCheck -->
+        <test-method signature="clickAbookFromList()[pri:9, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:48 BDT" name="clickAbookFromList" description="choosing a book from list" finished-at="2023-03-04T20:59:50 BDT" duration-ms="1718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAbookFromList -->
+        <test-method signature="orderButtonCheck()[pri:10, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:50 BDT" name="orderButtonCheck" description="Order korun button works?" finished-at="2023-03-04T20:59:52 BDT" duration-ms="2342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderButtonCheck -->
+        <test-method signature="checkoutBottonClickable()[pri:11, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:52 BDT" name="checkoutBottonClickable" description="Checkout button clickable?" finished-at="2023-03-04T20:59:57 BDT" duration-ms="5412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutBottonClickable -->
+        <test-method signature="confirmOrderWithAllEmptyField()[pri:12, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T20:59:57 BDT" name="confirmOrderWithAllEmptyField" description="No giving information works?" finished-at="2023-03-04T21:00:07 BDT" duration-ms="9266" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" data-value="...">অর্ডার সম্পন্ন করুন</button> is not clickable at point (984, 152). Other element would receive the click: <div class="blockUI blockOverlay" style="z-index: 1000; border: none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background: rgb(255, 255, 255); opacity: 0.6; cursor: default; position: absolute;"></div>
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d419d9bc990c2f43ddb6f203e8d8a368, clickElement {id=26c85f9f-2773-482e-8aa0-54fa8b2c6f55}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\MSI\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:52102}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52102/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (d419d9bc990c2f43ddb6f203e8d8a368)] -> xpath: //button[@id='place_order']]
+Session ID: d419d9bc990c2f43ddb6f203e8d8a368]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" data-value="...">অর্ডার সম্পন্ন করুন</button> is not clickable at point (984, 152). Other element would receive the click: <div class="blockUI blockOverlay" style="z-index: 1000; border: none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background: rgb(255, 255, 255); opacity: 0.6; cursor: default; position: absolute;"></div>
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d419d9bc990c2f43ddb6f203e8d8a368, clickElement {id=26c85f9f-2773-482e-8aa0-54fa8b2c6f55}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\MSI\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:52102}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52102/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (d419d9bc990c2f43ddb6f203e8d8a368)] -> xpath: //button[@id='place_order']]
+Session ID: d419d9bc990c2f43ddb6f203e8d8a368
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at testcases.FunctionalTestCases.confirmOrderWithAllEmptyField(FunctionalTestCases.java:172)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confirmOrderWithAllEmptyField -->
+        <test-method is-config="true" signature="getBrowser()[pri:0, instance:testcases.FunctionalTestCases@7a1a14a4]" started-at="2023-03-04T21:00:07 BDT" name="getBrowser" finished-at="2023-03-04T21:00:07 BDT" duration-ms="189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrowser -->
-      </class> <!-- testcases.FullTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testcases.FunctionalTestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
